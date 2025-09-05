@@ -232,8 +232,8 @@ export default function AssessmentPage() {
   }
 
   const progressPercent = calculateAssessmentProgress(
-    state.progress.answered, 
-    state.progress.total
+    state.progress.currentQuestionIndex, 
+    state.progress.totalQuestions
   );
 
   return (
@@ -253,7 +253,7 @@ export default function AssessmentPage() {
             <div className="text-right">
               <div className="text-sm text-gray-600">Progress</div>
               <div className="text-lg font-semibold">
-                {state.progress.answered} / {state.progress.total}
+                {state.progress.currentQuestionIndex} / {state.progress.totalQuestions}
               </div>
             </div>
           </div>
@@ -320,7 +320,7 @@ export default function AssessmentPage() {
 
             <div className="flex justify-between">
               <div>
-                {state.progress.answered > 0 && (
+                {state.progress.currentQuestionIndex > 0 && (
                   <button className="text-gray-600 hover:text-gray-800">
                     ← Previous
                   </button>
