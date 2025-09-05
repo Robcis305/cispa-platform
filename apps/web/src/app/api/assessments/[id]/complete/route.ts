@@ -60,7 +60,7 @@ function calculateDimensionScores(answers: any[], questions: any[]) {
 }
 
 function generateRecommendations(dimensionScores: Record<string, number>) {
-  const recommendations = [];
+  const recommendations: any[] = [];
   
   Object.entries(dimensionScores).forEach(([dimension, score]) => {
     if (score < SCORING_CONFIG.RISK_THRESHOLDS.HIGH_RISK) {
@@ -92,7 +92,7 @@ function generateRecommendations(dimensionScores: Record<string, number>) {
 }
 
 export async function POST(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
