@@ -16,11 +16,11 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "typescript": "5.9.2"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
-    "typescript": "5.9.2"
+    "@repo/typescript-config": "*"
   }
 }
