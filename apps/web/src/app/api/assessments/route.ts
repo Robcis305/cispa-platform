@@ -10,7 +10,7 @@ import {
 // GET /api/assessments - List user's assessments
 export async function GET(request: NextRequest) {
   try {
-    const supabase = createClient();
+    const supabase = await createClient();
     
     // Verify authentication
     const { data: { user }, error: authError } = await supabase.auth.getUser();
@@ -71,7 +71,7 @@ export async function GET(request: NextRequest) {
 // POST /api/assessments - Create new assessment
 export async function POST(request: NextRequest) {
   try {
-    const supabase = createClient();
+    const supabase = await createClient();
     
     // Verify authentication
     const { data: { user }, error: authError } = await supabase.auth.getUser();

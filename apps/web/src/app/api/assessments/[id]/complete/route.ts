@@ -96,7 +96,7 @@ export async function POST(
   { params }: { params: { id: string } }
 ) {
   try {
-    const supabase = createClient();
+    const supabase = await createClient();
     const assessmentId = params.id;
     
     // Verify authentication
