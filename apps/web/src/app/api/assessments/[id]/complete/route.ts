@@ -49,8 +49,10 @@ function calculateDimensionScores(answers: any[], questions: any[]) {
 
   // Calculate weighted averages
   Object.keys(dimensionScores).forEach(dimension => {
-    if (dimensionWeights[dimension] > 0) {
-      dimensionScores[dimension] = Math.round(dimensionScores[dimension] / dimensionWeights[dimension]);
+    const weight = dimensionWeights[dimension];
+    const score = dimensionScores[dimension];
+    if (weight && weight > 0 && score !== undefined) {
+      dimensionScores[dimension] = Math.round(score / weight);
     }
   });
 
