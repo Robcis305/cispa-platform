@@ -1,4 +1,4 @@
-// CISPA Platform Homepage
+// CISPA Platform Homepage - Updated for environment variables
 import Link from 'next/link';
 
 export default function HomePage() {
