@@ -1,4 +1,5 @@
 // CISPA Platform Homepage - Updated for environment variables
+'use client';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -16,17 +17,17 @@ export default function HomePage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                href="/dashboard"
+                href="/login"
                 className="bg-blue-600 text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-blue-700 transition-colors"
               >
-                Go to Dashboard
+                Get Started
               </Link>
-              <Link
-                href="/dashboard/assessments"
+              <button
                 className="bg-white text-gray-900 px-6 py-3 rounded-md text-lg font-medium border border-gray-300 hover:bg-gray-50 transition-colors"
+                onClick={() => alert('Dashboard coming soon!')}
               >
-                View Assessments
-              </Link>
+                Learn More
+              </button>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
