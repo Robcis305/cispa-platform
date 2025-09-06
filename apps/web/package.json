@@ -11,8 +11,6 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/ui": "*",
-    "@repo/shared": "*",
     "@supabase/supabase-js": "^2.39.7",
     "@supabase/ssr": "^0.1.0",
     "@tanstack/react-query": "^5.22.2",
@@ -32,8 +30,6 @@
     "typescript": "5.9.2"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
     "@types/node": "^22.15.3",
     "@types/react": "19.1.0",
     "@types/react-dom": "19.1.1",
